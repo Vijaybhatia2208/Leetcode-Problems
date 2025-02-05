@@ -1,8 +1,8 @@
 class Solution {
   // Function to check if Kth bit is set or not.
   checkKthBit(n: number, k: number): boolean {
-      let leftbit: number = 1<<k;
-      return (n & leftbit) !== 0;
+    let leftbit: number = 1<<k;
+    return (n & leftbit) !== 0;
   }
 }
 

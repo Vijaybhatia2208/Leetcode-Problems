@@ -5,9 +5,9 @@ function countBits(n: number): number[] {
     storeBit[i] = storeBit[i & i-1] + 1;
   }
 
-  let ans:number[] = [0, 1];
+  let ans:number[] = [0];
 
-  for (let i:number = 2; i<=n; i++) {
+  for (let i:number = 1; i<=n; i++) {
     ans.push(storeBit[i&255] + storeBit[i>>8 & 255] + storeBit[i>>16 & 255] + storeBit[i>>24 & 255]);
   }
 

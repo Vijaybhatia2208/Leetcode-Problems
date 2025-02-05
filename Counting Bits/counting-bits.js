@@ -4,9 +4,9 @@ function countBits(n) {
     for (var i = 1; i < 256; i++) {
         storeBit[i] = storeBit[i & i - 1] + 1;
     }
-    var ans = [0, 1];
-    for (var i = 2; i <= n; i++) {
-        ans.push(storeBit[i]);
+    var ans = [0];
+    for (var i = 1; i <= n; i++) {
+        ans.push(storeBit[i & 255] + storeBit[i >> 8 & 255] + storeBit[i >> 16 & 255] + storeBit[i >> 24 & 255]);
     }
     return ans;
 }
