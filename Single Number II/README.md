@@ -9,7 +9,7 @@ You must implement a solution with a linear runtime complexity and use only cons
 ### Example 1:
 ```markdown
 Input:
-n = nums = [2,2,3,2]
+n = [2,2,3,2]
 
 Output:
 3
